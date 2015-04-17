@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_game: MyText
+  play_by_play: MyText
+  first_half: MyText
+  second_half: MyText
+  newspaper: MyText
+  play__analysis: MyText
+
+two:
+  full_game: MyText
+  play_by_play: MyText
+  first_half: MyText
+  second_half: MyText
+  newspaper: MyText
+  play__analysis: MyText
