@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_id: 
+  name: MyText
+  height: MyText
+  year: MyText
+  number: 1
+  hometown: MyText
+
+two:
+  team_id: 
+  name: MyText
+  height: MyText
+  year: MyText
+  number: 1
+  hometown: MyText

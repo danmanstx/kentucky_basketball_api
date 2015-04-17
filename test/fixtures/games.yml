@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_team_id: 
+  away_team_id: 
+  home_score: 1
+  away_score: 1
+  overtime: 1
+  game_type: 1
+  date: 2015-04-17
+
+two:
+  home_team_id: 
+  away_team_id: 
+  home_score: 1
+  away_score: 1
+  overtime: 1
+  game_type: 1
+  date: 2015-04-17
