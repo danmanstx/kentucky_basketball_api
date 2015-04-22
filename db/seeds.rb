@@ -1,10 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
 School.create(
   [
@@ -54,7 +49,7 @@ School.create(
       name: 'Alabama',
       location: 'Tuscaloosa, Alabama',
       founded: '1831',
-      mascot: 'Gators'
+      mascot: 'Crimson Tide'
     },
     {
       name: 'Arkansas',
@@ -94,3 +89,107 @@ School.create(
     }
   ]
 )
+
+Team.create(
+  [
+    {
+      school_id: 1,
+      coach: 'Billy Donovan',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'East'
+    },
+    {
+      school_id: 2,
+      coach: 'Mark Fox',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'East'
+    },
+    {
+      school_id: 3,
+      coach: 'John Calipari',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'East'
+    },
+    {
+      school_id: 4,
+      coach: 'Kim Anderson',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'East'
+    },
+    {
+      school_id: 5,
+      coach: 'Frank Martin',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'East'
+    },
+    {
+      school_id: 6,
+      coach: 'Rick Barnes',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'East'
+    },
+    {
+      school_id: 7,
+      coach: 'Kevin Stallings',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'East'
+    },
+    {
+      school_id: 8,
+      coach: 'Avery Johnson',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'West'
+    },
+    {
+      school_id: 9,
+      coach: 'Mike Anderson',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'West'
+    },
+    {
+      school_id: 10,
+      coach: 'Bruce Pearl',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'West'
+    },
+    {
+      school_id: 11,
+      coach: 'Johnny Jones',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'West'
+    },
+    {
+      school_id: 12,
+      coach: 'Ben Howland',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'West'
+    },
+    {
+      school_id: 13,
+      coach: 'Andy Kennedy',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'West'
+    },
+    {
+      school_id: 14,
+      coach: 'Billy Kennedy',
+      year: 2015,
+      conference: 'Southeastern Conference',
+      division: 'West'
+    }
+  ]
+)
+
