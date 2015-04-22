@@ -15,6 +15,13 @@ def home_away(vs)
   vs == 'at' ? 'away' : 'home'
 end
 
+def game_type(team, date)
+  return 'conference' if team.include? '*'
+  return 'exhibition' if team.include? '#'
+  return 'tournament' if Date.strptime(date, '%m/%d/%y') > Date.parse('2015-03-15')
+  'non-conference'
+end
+
 def home_score(outcome, kentucky_home, winning_score, losing_score)
   kentucky_home == 'home' && outcome == 'W' ? winning_score : losing_score
 end
@@ -28,7 +35,7 @@ end
 
 games = []
 
-doc.xpath('//tr[@class="event-listing"]').each_with_index do |element, index|
+doc.xpath('//tr[@class="event-listing"]').each_with_index do |element|
   # puts element
   row_element = element.css('td')
 
@@ -54,9 +61,9 @@ doc.xpath('//tr[@class="event-listing"]').each_with_index do |element, index|
     location: location,
     home_score: home_score(outcome, home_away(vs), winning_score, losing_score.nil? ? temp_losing_score : losing_score),
     away_score: away_score(outcome, home_away(vs), winning_score, losing_score.nil? ? temp_losing_score : losing_score),
-    winning_score: winning_score,
-    game_type: 'season',
-    losing_score: losing_score.nil? ? temp_losing_score : losing_score,
+    # winning_score: winning_score,
+    game_type: game_type(opponent, date),
+    # losing_score: losing_score.nil? ? temp_losing_score : losing_score,
     over_time: number_of_overtimes(over_time)
   )
 end
