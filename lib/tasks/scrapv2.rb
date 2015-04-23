@@ -22,15 +22,15 @@ def game_type(team, date)
   'non-conference'
 end
 
-def home_score(outcome, kentucky_home, winning_score, losing_score)
-  kentucky_home == 'home' && outcome == 'W' ? winning_score : losing_score
+def home_score(outcome, ky_home, winning_score, losing_score)
+  ky_home == 'home' && outcome == 'W' ? winning_score : losing_score
 end
 
-def away_score(outcome, kentucky_home, winning_score, losing_score)
-  return winning_score if kentucky_home == 'away' && outcome == 'W'
-  return losing_score if kentucky_home == 'home' && outcome == 'W'
-  return winning_score if kentucky_home == 'home' && outcome == 'L'
-  return losing_score if kentucky_home == 'away' && outcome == 'L'
+def away_score(outcome, ky_home, winning_score, losing_score)
+  return winning_score if ky_home == 'away' && outcome == 'W'
+  return losing_score if ky_home == 'home' && outcome == 'W'
+  return winning_score if ky_home == 'home' && outcome == 'L'
+  return losing_score if ky_home == 'away' && outcome == 'L'
 end
 
 games = []
