@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 require 'json'
+require 'awesome_print'
 
 doc = Nokogiri::HTML(open('http://www.ukathletics.com/sports/m-baskbl/sched/kty-m-baskbl-sched.html'))
 
@@ -67,4 +68,4 @@ doc.xpath('//tr[@class="event-listing"]').each_with_index do |element|
     over_time: number_of_overtimes(over_time)
   )
 end
-puts JSON.pretty_generate(games)
+ap games
